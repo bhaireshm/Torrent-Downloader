@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Torrent-Downloader"
+    }
+  },
+  "defaultProject": "Torrent-Downloader",
+  "cli": {
+    "analytics": "b4c5f87d-f308-4239-b412-37c671d931a5"
+  }
 }
