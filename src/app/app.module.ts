@@ -8,10 +8,24 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { LandingModule } from './modules/landing/landing.module';
 import { TorrentModule } from './modules/torrent/torrent.module';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, PageNotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, LandingModule, TorrentModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    PageNotFoundComponent,
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    LandingModule,
+    TorrentModule,
+    NgbModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

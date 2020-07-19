@@ -4,18 +4,14 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: () =>
       import('./modules/landing/landing.module').then((m) => m.LandingModule),
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent,
+    path: 'torrent',
+    loadChildren: () =>
+      import('./modules/torrent/torrent.module').then((m) => m.TorrentModule),
   },
 ];
 
