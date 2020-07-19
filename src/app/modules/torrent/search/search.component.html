@@ -1,7 +1,7 @@
 <main role="main" class="container">
 
-  <section class="jumbotron text-center">
-    <h1 class="">Lets Search Movies</h1>
+  <section class="container my-5 text-center">
+    <h1 class="heading">Lets Search Movies</h1>
 
     <div class="form-group">
       <input type="text" class="form-control" (keyup)="searchMovies($event)">
@@ -27,7 +27,7 @@
             <div class="card-body">
               <div class="justify-content-between text-center">
                 <div class="btn-group">
-                  <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse"
+                  <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse"
                     data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Download</button>
                   <a [routerLink]="[movie.id]" type="button" class="btn btn-sm btn-outline-secondary">View</a>
                 </div>
@@ -36,7 +36,7 @@
             <div class="collapse text-center" id="collapseExample">
               <div class="card-body pt-0">
                 <div *ngFor="let torrent of movie.torrents" class="mt-1">
-                  <a href="javascript:void(0)" class="badge badge-primary" style="cursor:pointer"
+                  <a href="javascript:void(0)" class="badge badge-pill badge-light" style="cursor:pointer"
                     (click)="downloadTorrent(torrent, movie)">{{torrent.quality}} - {{torrent.type | uppercase}} - {{torrent.size}}</a>
                 </div>
               </div>
@@ -49,10 +49,7 @@
   </div>
 
   <div class="my-3" *ngIf="!isFetching && torrentRes && torrentRes.movie_count > 0">
-    <!-- <button class="btn btn-primary" (click)="gotoNextpage(4)"> Next Page</button> -->
-    <!-- <ngb-pagination [(page)]="2" [pageSize]="pageSize" [collectionSize]="movieCount"></ngb-pagination> -->
-    <!-- <ngb-pagination class="d-flex justify-content-center" [collectionSize]="movieCount" [(page)]="pageNumber"
-      aria-label="Default pagination"></ngb-pagination> -->
+    <button class="btn btn-secondary" (click)="gotoNextpage(4)"> Next Page</button>
   </div>
 
 </main>

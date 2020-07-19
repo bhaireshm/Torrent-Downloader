@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
   constructor(private yts: YtsService, private http: HttpClient) {}
 
   ngOnInit() {
-    // this.fetchMovies();
+    this.fetchMovies();
     this.pageLimit = this.yts.pageLimit;
   }
 
